@@ -1,0 +1,12 @@
+[package]
+name = "unitypackage_extractor"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.100"
+flate2 = "1.1.5"
+path-clean = "1.0.1"
+regex = "1.12.2"
+tar = "0.4.44"
+tempfile = "3.23.0"
