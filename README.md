@@ -21,8 +21,8 @@ You need to have the [Rust toolchain](https://www.rust-lang.org/tools/install) i
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/your-username/unitypackage_extractor_rs.git
-    cd unitypackage_extractor_rs
+    git clone https://github.com/ShinuToki/unitypackage_extractor.git
+    cd unitypackage_extractor
     ```
 
 2. Build the release binary:
