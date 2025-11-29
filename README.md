@@ -14,9 +14,18 @@ While the original Python script is excellent, porting it to Rust provides sever
 
 ## Installation
 
-### Option 1: Build from Source
+### Option 1: Download Binary (Recommended)
 
-You need to have the [Rust toolchain](https://www.rust-lang.org/tools/install) installed.
+You don't need to install Rust to use this tool. Just download the executable:
+
+1. Go to the **[Releases Page](https://github.com/ShinuToki/unitypackage_extractor/releases)**.
+2. Expand the "Assets" section of the latest version.
+3. Download `unitypackage_extractor.exe`.
+4. Place it anywhere on your computer.
+
+### Option 2: Build from Source
+
+If you prefer to build it yourself, you need to have the [Rust toolchain](https://www.rust-lang.org/tools/install) installed.
 
 1. Clone this repository:
 
