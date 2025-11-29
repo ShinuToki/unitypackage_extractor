@@ -1,0 +1,26 @@
+name: Build Windows Binary
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch: # Allows you to run this manually from the Actions tab
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    name: Build Release
+    runs-on: windows-latest # We use a Windows VM to generate the .exe
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Build (Release mode)
+      run: cargo build --release --verbose
+
+    - name: Upload Executable Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: unitypackage_extractor_windows
+        path: target/release/unitypackage_extractor.exe
