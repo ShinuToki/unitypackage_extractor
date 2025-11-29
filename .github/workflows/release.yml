@@ -1,0 +1,30 @@
+name: Release Windows Binary
+
+permissions:
+  contents: write
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  release:
+    name: Build and Release
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Project (Release Mode)
+        run: cargo build --release --verbose
+
+      - name: Create Release and Upload Asset
+        uses: softprops/action-gh-release@v1
+        with:
+          files: target/release/unitypackage_extractor.exe
+          name: Release ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          generate_release_notes: true
